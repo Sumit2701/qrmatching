@@ -5,6 +5,7 @@ import { useState , useEffect} from 'react';
 function App() {
   const [arr, setArr]=useState();
   const [str, setStr]=useState("");
+  const [Text, setText]=useState("");
 
   const [value, setValue]=useState();
   useEffect(() => {
@@ -13,6 +14,8 @@ function App() {
   }, [str])
 
   const match=(text,result)=>{
+    console.log("called")
+    setText(text)
     console.log(text, result)
    setValue(arr.includes(text))
    // return str.includes(value)
@@ -27,6 +30,7 @@ function App() {
 <div style={{display:"flex", justifyContent:"center" }}>
 <input onChange={(e)=>setStr(e.target.value)} ></input>
     {value} 
+    {Text}
 </div>
 </div>
 
