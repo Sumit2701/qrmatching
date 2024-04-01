@@ -13,17 +13,11 @@ function App() {
     
   }, [str])
   useEffect(() => {
+    if(value)
     setText(arr.includes(value))
     
   }, [value])
 
-  const match=(text,result)=>{
-    console.log("called")
-    setText(text)
-    console.log(text, result)
-   setValue(arr.includes(text))
-   // return str.includes(value)
-  }
 
   
   return (
