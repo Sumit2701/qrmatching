@@ -4,7 +4,7 @@ import { useState , useEffect} from 'react';
 
 function App() {
   const [arr, setArr]=useState();
-  const [str, setStr]=useState();
+  const [str, setStr]=useState("");
 
   const [value, setValue]=useState();
   useEffect(() => {
