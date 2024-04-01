@@ -12,8 +12,9 @@ function App() {
     
   }, [str])
 
-  const match=(value)=>{
-   setValue( arr.includes(value))
+  const match=(text,result)=>{
+    console.log(text, result)
+   setValue(arr.includes(text))
    // return str.includes(value)
   }
   
