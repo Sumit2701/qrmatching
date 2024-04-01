@@ -33,7 +33,7 @@ if(text && arr){
           onResult={(text, result) => match(text)}
           onError={(error) => console.log(error?.message)}
         /><div style={{margin:"20px"}} >
-                 {scanned&& <h1>{ Text ? <>Perfect Match</> : <>Fail</>}</h1>}
+               {scanned&& <h1>{ Text ? <>{value &&value.slice(16,20)}  Perfect Match</> : <>{value &&value.slice(16,20)}  Fail</>}</h1>}
         <p>{value &&value.slice(0,20)}</p>
         </div>
 
