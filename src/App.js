@@ -12,7 +12,8 @@ function App() {
   useEffect(() => {
     
     if(str)
-    setArr(str.split((",")))
+    setArr(str.split(",").map(item => item.trim()));
+
   }, [str, Text])
 
 const match= async(text)=>
