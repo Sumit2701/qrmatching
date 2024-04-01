@@ -16,8 +16,8 @@ function App() {
   useEffect(() => {
     console.log(arr)
     if(value && arr){
-    setText(arr.includes(value))
-  console.log(arr.includes(value))
+      setText(arr.some(item => item.startsWith(value.slice(0, 20))));
+     console.log(arr.some(item => item.startsWith(value.slice(0, 20))))
     }
   }, [value])
 
