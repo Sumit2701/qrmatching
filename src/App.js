@@ -15,9 +15,10 @@ function App() {
 
   useEffect(() => {
     console.log(arr)
-    if(value && arr)
+    if(value && arr){
     setText(arr.includes(value))
-    
+  console.log(arr.includes(value))
+    }
   }, [value])
 
 
