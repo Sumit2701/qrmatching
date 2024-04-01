@@ -32,7 +32,7 @@ if(text && arr){
         <Scanner
           onResult={(text, result) => match(text)}
           onError={(error) => console.log(error?.message)}
-        /><div >
+        /><div style={{margin:"20px"}} >
                  {scanned&& <h1>{ Text ? <>Perfect Match</> : <>Fail</>}</h1>}
         <p>{value &&value.slice(0,20)}</p>
         </div>
