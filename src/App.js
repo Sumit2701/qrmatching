@@ -12,6 +12,10 @@ function App() {
     setArr(str.split((" ")))
     
   }, [str])
+  useEffect(() => {
+    setText(arr.includes(value))
+    
+  }, [value])
 
   const match=(text,result)=>{
     console.log("called")
@@ -20,11 +24,12 @@ function App() {
    setValue(arr.includes(text))
    // return str.includes(value)
   }
+
   
   return (
     <div style={{display:"flex", justifyContent:"center" }}>
       <div style={{width:"400px"}}>          <Scanner
-    onResult={(text, result) => match(text, result)}
+    onResult={(text, result) => setValue(text)}
     onError={(error) => console.log(error?.message)}
 />
 <div style={{display:"flex", justifyContent:"center" }}>
