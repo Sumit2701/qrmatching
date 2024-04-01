@@ -34,7 +34,7 @@ if(text && arr){
           onError={(error) => console.log(error?.message)}
         /><div >
                  {scanned&& <h1>{ Text ? <>Perfect Match</> : <>Fail</>}</h1>}
-        <p>{value.slice(0,20)}</p>
+        <p>{value &&value.slice(0,20)}</p>
         </div>
 
         <div style={{display:"", justifyContent:"center"}}>
