@@ -5,7 +5,7 @@ import { useState , useEffect} from 'react';
 function App() {
   const [arr, setArr]=useState();
   const [str, setStr]=useState();
-  const [Text, setText]=useState(null);
+  const [Text, setText]=useState(false);
   const [scanned, setScanned]=useState(false);
 
   const [value, setValue]=useState();
@@ -26,7 +26,7 @@ if(text && arr){
   console.log(arr.some(item => item.startsWith(text.slice(0, 20))));
 }}
   return(
-<div style={{backgroundColor: Text ? 'lightgreen' : 'lightred'}}>
+<div style={{backgroundColor: Text ? 'lightgreen' : 'white'}}>
     <div style={{display:"flex", justifyContent:"center"}}>
       <div style={{width:"400px"}}>
         <Scanner
@@ -34,7 +34,7 @@ if(text && arr){
           onError={(error) => console.log(error?.message)}
         /><div >
                  {scanned&& <h1>{ Text ? <>Perfect Match</> : <>Fail</>}</h1>}
-        <p>{value}</p>
+        <p>{value.slice(0,20)}</p>
         </div>
 
         <div style={{display:"", justifyContent:"center"}}>
