@@ -10,7 +10,7 @@ function App() {
   const [value, setValue]=useState();
   useEffect(() => {
     if(str)
-    setArr(str.split((" ")))
+    setArr(str.split((",")))
   }, [str])
 
   useEffect(() => {
@@ -29,10 +29,11 @@ function App() {
     onResult={(text, result) => setValue(text)}
     onError={(error) => console.log(error?.message)}
 />
+<h1>{value}</h1> 
 <div style={{display:"", justifyContent:"center" }}>
-    {Text}
+   <h1>{Text}</h1> 
 </div>
-<textarea onChange={(e)=>setStr(e.target.value)} ></textarea>
+<input onChange={(e)=>setStr(e.target.value)} ></input>
 
 </div>
 
